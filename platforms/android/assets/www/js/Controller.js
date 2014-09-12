@@ -8,7 +8,7 @@ $(document).on('pageinit','#orders', function(){
 	$("#orders").on('pagebeforeshow', function(){
 		$.ajax({
 		type : 'GET',
-		url : "http://10.73.213.215:8080/server/getOrders/1",
+		url : "http://192.168.2.22:8080/server/getOrders/1",
 		}).done(function(data){
 			getOrdersForVendor(data);
 		}).fail(function(){
@@ -24,7 +24,7 @@ $(document).on('pageinit','#orders', function(){
 		$.ajax({
 		type : 'GET',
 		//url : "http://192.168.2.22:8080/server/getOrderItems/"+orderId,
-		url : "http://10.73.213.215:8080/server/getOrderItems/"+orderId,
+		url : "http://192.168.2.22:8080/server/getOrderItems/"+orderId,
 		}).done(function(data){
 			getOrderItems(data);
 		}).fail(function(){
@@ -47,7 +47,7 @@ $(document).on('pageinit','#orderDesc', function(){
 		$.ajax({
 		type : 'POST',
 		//url : "http://192.168.2.22:8080/server/getOrderItems/"+orderId,
-		url : "http://10.73.213.215:8080/server/orderready/",
+		url : "http://192.168.2.22:8080/server/orderready/",
 		data : {"regId" : regId}
 		}).done(function(data){
 			alert("userNotified");
@@ -67,7 +67,7 @@ function orderDone(id){
 	$.ajax({
 		type : 'POST',
 		//url : "http://192.168.2.22:8080/server/getOrderItems/"+orderId,
-		url : "http://10.73.213.215:8080/server/ordercomplete/",
+		url : "http://192.168.2.22:8080/server/ordercomplete/",
 		data : {"completedOrderId" : completedOrderId}
 		}).done(function(){
 			$.mobile.changePage('#orders');
