@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
@@ -19,55 +19,93 @@
 -->
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-		<script src="js/jquery-1.11.1.js"></script>
+        <title>Orderchief</title>
+        <script src="js/jquery-1.11.1.js"></script>
 		<script src="js/jquery.mobile-1.4.3.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/ocss.css">
 		<link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css">
-        <script src="js/Controller.js"></script>
-		<script src="js/index.js"></script
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
+		<link rel="stylesheet" href="css/themes/oc.css" />
+  		<link rel="stylesheet" href="css/themes/oc.min.css" />
+		
+		
+		<script src="js/Controller.js"></script>
+		<script src="js/index.js"></script>
+		
     </head>
+	
+	
     <body>
-        <div data-role="page" data-control-title="Home" id="home">
-      <div data-theme="a" data-role="header">
+	
+	 <div data-theme="A" data-role="page" data-control-title="Login" id="loginPage">
+		<div data-theme="A" data-role="header">
           <h3>
               OrderChief
           </h3>
-      </div>
-      <div data-role="content">
-          <a data-role="button" data-transition="slide" href="#orders" data-icon="search"
+		</div>
+		<div data-role="content">
+				<form action="" method="POST" id="loginInfo">
+
+					  <div>
+						<label>
+						  <span style="color:#fff;">UserName</span>
+						  <input type="text" id="username" style="background-color:white;"/>
+						</label>
+					  </div>
+
+					  <div>
+						<label>
+						  <span style="color:#fff;">Password</span>
+						  <input type="password" id="password" style="background-color:white;"/>
+						</label>
+					  </div>
+
+					  <a data-role="button" data-icon="arrow-r" data-theme="b" id="loginBtn">Login</a>
+				</form>
+		</div> <!-- content -->	
+		<div data-theme="A" data-role="footer" data-position="fixed">
+			<h4><a href="http://www.orderchief.com">orderchief.com</a></h4>
+		</div><!-- footer -->
+	</div>
+		
+    <div data-theme="A" data-role="page" data-control-title="Home" id="home">
+		<div data-theme="A" data-role="header">
+          <h3>
+              OrderChief
+          </h3>
+		</div>
+		<div data-role="content">
+          <a data-theme="A" data-role="button" data-transition="slide" href="#orders" data-icon="search"
           data-iconpos="left">
-              Current Orders
+              My Orders
           </a>
-      </div>
-  </div>
+		</div>
+		<div data-theme="A" data-role="footer" data-position="fixed">
+			<h4><a href="http://www.orderchief.com">orderchief.com</a></h4>
+		</div><!-- footer -->
+	</div>
 	
-    <div data-role="page" id="orders">
-		<div data-role="header" data-position="fixed">
+    <div data-theme="A" data-role="page" id="orders">
+		<div data-theme="A" data-role="header" data-position="fixed">
 			<h1>ORDERCHIEF</h1>
 		</div> <!-- Header -->
-		<div data-role="content">
-			<ul data-role="listview" id="orders-list" data-divider-theme="b" data-inset="true"></ul>
+		<div data-theme="A" data-role="content">
+			<ul data-theme="A" data-role="listview" id="orders-list" data-divider-theme="b" data-inset="true"></ul>
         </div> <!-- content -->
-       <div data-role="footer" data-position="fixed">
+       <div data-theme="A" data-role="footer" data-position="fixed">
 			<h4>orderchief.com</h4>
 		</div><!-- footer -->
 	</div>	<!-- page #vendors -->
 
-	<div data-role="page" id="orderDesc">
-		<div data-role="header" data-position="fixed">
+	<div data-theme="A" data-role="page" id="orderDesc">
+		<div data-theme="A" data-role="header" data-position="fixed">
 			<h1>ORDERCHIEF</h1>
-			<a data-role="button" data-icon="arrow-r" data-theme="b" class="ui-btn-right" id="orderReady">Order Ready</a>
+			<a data-theme="A" data-role="button" data-icon="arrow-r" data-theme="b" class="ui-btn-right" id="orderReady">Order Ready</a>
 		</div> <!-- Header -->
-		<div data-role="content">
+		<div data-theme="A" data-role="content">
 			<p id="orderContent"></p>
         </div> <!-- content -->
-       <div data-role="footer" data-position="fixed">
+       <div data-theme="A" data-role="footer" data-position="fixed">
 			<h4>orderchief.com</h4>
 		</div><!-- footer -->
 	</div>	<!-- page #vendors -->
